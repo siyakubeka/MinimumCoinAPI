@@ -1,0 +1,24 @@
+# MinimumCoinAPI
+Documentation
+
+1. I created a contoller called CalculationController
+This contoller commuicates to the model called Calculation by sending the arrays that contains the different denominations of coins, number of coins and the amount that needs to be pays out, wich is the Y value.
+2. I created a model called Calculations
+This model receives values from the CalculationContoller, then computes the values using the Brute force algorithm wuth recursion.
+Once the values has been computed, the CaculationContoller returns the results of the computation.
+3. The Rest Api uses SWAGGER to display on the index.html.
+Click Get
+Click Try it out
+Click Execute
+
+Then under the Response body you will see the output of the computation.
+
+Example:
+
+In this case, the coins are 25, 10, 5
+The length or the number of coins is 3
+The amount that needs to be paid out is 30
+
+After computing, the change is 2
+
+One can change values and use values on their choice in the CalculationController.
