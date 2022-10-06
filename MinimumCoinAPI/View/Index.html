@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>Coin Dispenser</h2>
+    <input type="text" id="coins" size="5" />
+    <input type="text" id="amount" size="5" />
+    <input type="text" id="tn" size="5" />
+    <input type="button" value="add" onclick="calc();" />
+
+    <script>
+        function calc() {
+            alert("here api/Calculation/countMinCoin/ " + coin.value + " /" + Y.value)
+            $.ajax({
+                url: "api/Calculation/countMinCoin/" + coin.value + "/" + Y.value,
+                //url: 
+                cache: false,
+                success: function (html) {
+                    alert(html)
+                    tn.value = html
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
